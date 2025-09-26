@@ -1,4 +1,4 @@
 {
-  "title": "That's about it!",
-  "text": "If you are familiar with React, or SPA frameworks in general, there shouldn't be any confusing parts about this template. if not, you can always reach out to me and I'll try me best to answer your questions."
+  "title": "En resumidas cuentas...",
+  "text": "La página permitirá a los usuarios crear un árbol familiar digital donde podrán establecer relaciones entre los distintos miembros, visualizados en un formato similar a un organigrama. Cada nodo incluirá una imagen y datos básicos del individuo (como nombre y fecha de nacimiento), con la posibilidad de ampliar la información con recuerdos, fotografías y otras adiciones pertinentes."
 }

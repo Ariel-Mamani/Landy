@@ -1,15 +1,15 @@
 {
-  "title": "Light, fast & responsive",
-  "text": "This template is ready to use, so you don't need to change anything at a component level, unless you want to customize the default styling.",
+  "title": "Ligero, rapido y fácil de usar.",
+  "text": "FamilyRoots te permite crear y gestionar tu árbol genealógico de manera intuitiva y eficiente, con una interfaz amigable y herramientas poderosas para explorar tu historia familiar.",
   "section": [
     {
-      "title": "Why Antd?",
-      "content": "Ant Design is a React UI library that has a lot of easy-to-use components for building elegant UI.",
+      "title": "Comparte tu arbol",
+      "content": "Compartí permisos con otros usuarios para colaborar en su construcción, de forma similar a un documento Word compartido",
       "icon": "notes.svg"
     },
     {
-      "title": "Why styled-components?",
-      "content": "Styled Components gives you total control over your components.",
+      "title": "¿Falta informacion?",
+      "content": "El diseño estará orientado a un público mayor de 50 años, priorizando la simplicidad en la navegación y en la carga inicial de datos.",
       "icon": "notes.svg"
     }
   ]
