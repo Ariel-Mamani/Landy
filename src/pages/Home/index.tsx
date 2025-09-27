@@ -5,6 +5,7 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
+import FamilyTreeDiagram  from "../../components/Arbol/FamilyTreeDiagram"; 
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -33,15 +34,14 @@ const Home = () => {
         direction="left"
         title={AboutContent.title}
         content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
+        icon="manosEnArbol.jpg"
         id="about"
       />
       <ContentBlock
         direction="right"
         title={MissionContent.title}
         content={MissionContent.text}
-        icon="product-launch.svg"
+        icon="arbolManualidad.jpg"
         id="mission"
       />
       <ContentBlock
@@ -51,6 +51,14 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
+      <div style={{ padding: "50px 0", background: "#f5f5f5" }}>
+        <Container>
+          <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
+            Visualiza tu Historia Familiar
+          </h2>
+          <FamilyTreeDiagram />
+        </Container>
+      </div>
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}

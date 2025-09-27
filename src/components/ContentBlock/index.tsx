@@ -1,4 +1,4 @@
-import { Row, Col } from "antd";
+import {  Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
 
@@ -10,8 +10,6 @@ import {
   Content,
   ContentWrapper,
   ServiceWrapper,
-  MinTitle,
-  MinPara,
   StyledRow,
   ButtonWrapper,
 } from "./styles";
@@ -20,7 +18,6 @@ const ContentBlock = ({
   icon,
   title,
   content,
-  section,
   button,
   t,
   id,
@@ -74,31 +71,6 @@ const ContentBlock = ({
                 </ButtonWrapper>
               ) : (
                 <ServiceWrapper>
-                  <Row justify="space-between">
-                    {typeof section === "object" &&
-                      section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
-                          return (
-                            <Col key={id} span={11}>
-                              <SvgIcon
-                                src={item.icon}
-                                width="60px"
-                                height="60px"
-                              />
-                              <MinTitle>{t(item.title)}</MinTitle>
-                              <MinPara>{t(item.content)}</MinPara>
-                            </Col>
-                          );
-                        }
-                      )}
-                  </Row>
                 </ServiceWrapper>
               )}
             </ContentWrapper>
@@ -108,5 +80,4 @@ const ContentBlock = ({
     </ContentSection>
   );
 };
-
 export default withTranslation()(ContentBlock);
