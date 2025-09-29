@@ -23,7 +23,7 @@ const Home = () => {
         title={IntroContent.title}
         content={IntroContent.text}
         button={IntroContent.button}
-        icon="developer.svg"
+        icon="album-de-fotos.jpg"
         id="intro"
       />
       <MiddleBlock
@@ -49,18 +49,18 @@ const Home = () => {
         direction="left"
         title={ProductContent.title}
         content={ProductContent.text}
-        icon="waving.svg"
+        icon="pareja-con-computadora.jpg"
         id="product"
       />
-      <div style={{ padding: "50px 0", background: "#f5f5f5" }}>
+      <div style={{ padding: "50px 0", background: "#ffffffff" }}>
         <Container>
-          <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
+          <FamilyTreeDiagram />
+          <h2 style={{ textAlign: "center", marginBottom: "30px", marginTop: "30px"}}>
             Estado actual del Proyecto
           </h2>
           <Roadmap />
           <br />
           <br />
-          <FamilyTreeDiagram />
         </Container>
       </div>
       <Contact

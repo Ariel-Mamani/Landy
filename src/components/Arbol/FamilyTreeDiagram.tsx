@@ -31,7 +31,7 @@ const FamilyTreeDiagram = () => {
                     "Vertical",
                     { margin: 8, defaultAlignment: go.Spot.Center },
 
-                    // 📌 Imagen circular
+                    
                     $(
                         go.Panel,
                         "Spot",
@@ -63,7 +63,7 @@ const FamilyTreeDiagram = () => {
                         {
                             margin: 8,
                             defaultAlignment: go.Spot.Left,
-                            stretch: go.GraphObject.length // hace que el texto ocupe todo el ancho
+                            stretch: go.GraphObject.length 
                         },
                         $(
                             go.TextBlock,
@@ -168,7 +168,6 @@ const FamilyTreeDiagram = () => {
 
     return (
         <div>
-            <h3 style={{ textAlign: "center" }}>Ejemplo de Árbol Genealógico</h3>
             <div
                 ref={diagramRef}
                 style={{
