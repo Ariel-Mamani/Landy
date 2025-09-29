@@ -11,8 +11,8 @@ const FamilyTreeDiagram = () => {
             const myDiagram = $(go.Diagram, diagramRef.current, {
                 "undoManager.isEnabled": true,
                 layout: $(go.TreeLayout, { angle: 90, layerSpacing: 40 }),
+                contentAlignment: go.Spot.Center,
             });
-
             // Plantilla para cada nodo
             myDiagram.nodeTemplate = $(
                 go.Node,
@@ -175,6 +175,8 @@ const FamilyTreeDiagram = () => {
                     height: "1000px",
                     border: "1px solid #ccc",
                     background: "#f9f9f9",
+                    justifyContent: "center",   
+                    alignItems: "center"  
                 }}
             ></div>
         </div>
