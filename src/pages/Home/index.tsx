@@ -5,7 +5,8 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
-import FamilyTreeDiagram  from "../../components/Arbol/FamilyTreeDiagram"; 
+import FamilyTreeDiagram  from "../../components/Arbol/FamilyTreeDiagram";
+import Roadmap from "../../components/Roadmap/Roadmap";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -54,8 +55,11 @@ const Home = () => {
       <div style={{ padding: "50px 0", background: "#f5f5f5" }}>
         <Container>
           <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
-            Visualiza tu Historia Familiar
+            Estado actual del Proyecto
           </h2>
+          <Roadmap />
+          <br />
+          <br />
           <FamilyTreeDiagram />
         </Container>
       </div>
