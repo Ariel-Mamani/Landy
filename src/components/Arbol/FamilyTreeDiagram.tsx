@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
 import * as go from 'gojs';
+import familyData from "../../content/FamilyContent.json";
+
 
 const FamilyTreeDiagram = () => {
     const diagramRef = useRef<HTMLDivElement | null>(null);
@@ -99,70 +101,7 @@ const FamilyTreeDiagram = () => {
             );
 
     
-            myDiagram.model = new go.TreeModel([
-                {
-                    key: 1,
-                    name: "Agustin Gonzales (Yo)",
-                    fechaNacimiento: "2000-05-14",
-                    edad: 24,
-                    lugarNacimiento: "Buenos Aires",
-                    source: "/img/svg/hijo.jpg"
-                },
-                {
-                    key: 2,
-                    parent: 1,
-                    name: "Padre",
-                    fechaNacimiento: "1975-09-10",
-                    edad: 49,
-                    lugarNacimiento: "Buenos Aires",
-                    source: "/img/svg/padre.jpg"
-                },
-                {
-                    key: 3,
-                    parent: 1,
-                    name: "Madre",
-                    fechaNacimiento: "1978-02-22",
-                    edad: 46,
-                    lugarNacimiento: "Córdoba",
-                    source: "/img/svg/madre.jpg"
-                },
-                {
-                    key: 4,
-                    parent: 2,
-                    name: "Abuelo",
-                    fechaNacimiento: "1950-11-03",
-                    edad: 74,
-                    lugarNacimiento: "Mendoza",
-                    source: "/img/svg/abuelo2.jpg"
-                },
-                {
-                    key: 5,
-                    parent: 2,
-                    name: "Abuela",
-                    fechaNacimiento: "1952-07-19",
-                    edad: 72,
-                    lugarNacimiento: "Mendoza",
-                    source: "/img/svg/abuela.jpg"
-                },
-                {
-                    key: 6,
-                    parent: 3,
-                    name: "Abuelo",
-                    fechaNacimiento: "1950-11-03",
-                    edad: 75,
-                    lugarNacimiento: "Cordoba",
-                    source: "/img/svg/abuelo.jpg"
-                },
-                {
-                    key: 7,
-                    parent: 3,
-                    name: "Abuela",
-                    fechaNacimiento: "1952-07-19",
-                    edad: 74,
-                    lugarNacimiento: "Cordoba",
-                    source: "/img/svg/abuela2.jpg"
-                }
-            ]);
+            myDiagram.model = new go.TreeModel(familyData);
         }
     }, []);
 

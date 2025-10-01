@@ -5,14 +5,21 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
-import FamilyTreeDiagram  from "../../components/Arbol/FamilyTreeDiagram";
+import FamilyTreeDiagram from "../../components/Arbol/FamilyTreeDiagram";
+import InfoChartContent from "../../content/InfoChartContent.json";
+
 import Roadmap from "../../components/Roadmap/Roadmap";
+import { PieChart } from "../../components/Chart/PieChart";
+import { BarChart } from "../../components/BarChart/BarChart"; 
+import FamilyContent from "../../content/FamilyContent.json";
+
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const ContentChart = lazy(() => import("../../components/ContentChart"));
 
 const Home = () => {
   return (
@@ -55,7 +62,21 @@ const Home = () => {
       <div style={{ padding: "50px 0", background: "#ffffffff" }}>
         <Container>
           <FamilyTreeDiagram />
-          <h2 style={{ textAlign: "center", marginBottom: "30px", marginTop: "30px"}}>
+          <ContentChart
+            direction="right"
+            title={InfoChartContent.title}
+            content={InfoChartContent.text}
+            chartComponent={<PieChart />} // 👈 aquí paso el gráfico
+            id="product"
+          />
+          <ContentChart
+            direction="left"
+            title={InfoChartContent.titulodos}
+            content={InfoChartContent.textodos}
+            chartComponent={<BarChart familyData={FamilyContent} />}
+            id="gender"
+          />
+          <h2 style={{ textAlign: "center", marginBottom: "30px", marginTop: "30px" }}>
             Estado actual del Proyecto
           </h2>
           <Roadmap />
